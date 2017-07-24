@@ -31,43 +31,7 @@ namespace SelFormFiller
             }
             baseURL = url;
             verificationErrors = new StringBuilder();
-        }
-        
-        public void TheCreateNameProfileTest()
-        {
-            driver.Navigate().GoToUrl(baseURL + "/#/login?backUrl=%2F");
-            driver.FindElement(By.Id("login-username")).Clear();
-            driver.FindElement(By.Id("login-username")).SendKeys("tradingsupportanalyst1");
-            driver.FindElement(By.Id("login-password")).Clear();
-            driver.FindElement(By.Id("login-password")).SendKeys("password");
-            driver.FindElement(By.XPath("//button[@type='submit']")).Click();
-            driver.FindElement(By.CssSelector("i.arrow.icon-chevron_right")).Click();
-            driver.FindElement(By.LinkText("Name Management")).Click();
-            driver.FindElement(By.Name("btnEdit")).Click();
-            driver.FindElement(By.Name("btnAddNew")).Click();
-            driver.FindElement(By.Name("enFullName")).Clear();
-            driver.FindElement(By.Name("enFullName")).SendKeys("seltest1");
-            driver.FindElement(By.Name("twFullName")).Clear();
-            driver.FindElement(By.Name("twFullName")).SendKeys("seltest1");
-            driver.FindElement(By.Name("cnFullName")).Clear();
-            driver.FindElement(By.Name("cnFullName")).SendKeys("seltest1");
-            driver.FindElement(By.Name("enShortName")).Clear();
-            driver.FindElement(By.Name("enShortName")).SendKeys("seltest1");
-            driver.FindElement(By.Name("twShortName")).Clear();
-            driver.FindElement(By.Name("twShortName")).SendKeys("seltest1");
-            driver.FindElement(By.Name("cnShortName")).Clear();
-            driver.FindElement(By.Name("cnShortName")).SendKeys("seltest1");
-            new SelectElement(driver.FindElement(By.Name("continentId"))).SelectByText("Africa");
-            new SelectElement(driver.FindElement(By.Name("countryId"))).SelectByText("France");
-            driver.FindElement(By.Name("eventLevel1Code")).Clear();
-            driver.FindElement(By.Name("eventLevel1Code")).SendKeys("1234");
-            driver.FindElement(By.XPath("//div[@id='sdaExpiryDate']/div/div[2]/div/table/tbody/tr[6]/td[2]")).Click();
-            driver.FindElement(By.CssSelector("div.rdt.form-control > div.rdtPicker > div.rdtDays > table > tfoot > tr > td.rdtTimeToggle > input.form-control.input-hour")).Clear();
-            driver.FindElement(By.CssSelector("div.rdt.form-control > div.rdtPicker > div.rdtDays > table > tfoot > tr > td.rdtTimeToggle > input.form-control.input-hour")).SendKeys("09");
-            driver.FindElement(By.Name("btnCreate")).Click();
-            driver.FindElement(By.Name("btnConfirm")).Click();
-            driver.FindElement(By.Name("btnConfirm")).Click();
-        }
+        }       
 
         public void TheFormTest(String firstname, String lastName, String gender)
         {
