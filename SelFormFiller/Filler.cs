@@ -24,7 +24,7 @@ namespace SelFormFiller
                 service.HideCommandPromptWindow = true;
                 service.SuppressInitialDiagnosticInformation = true;
                 //service.ConnectToRunningBrowser = true;
-                driver = new FirefoxDriver(service);
+                driver = new FirefoxDriver(service);                
             } else
             {
                 driver = drv;
